@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+
+    <link rel="stylesheet" href="css/responsiveList.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <script>
+
+    </script>
+
+    <title>Responsive List</title>
+
+
+</head>
+
+
+<body data-ng-app="responsiveList" data-ng-controller="responsiveListController">
+
+<div id="topContainer" style="background-color:rgba(123,0,0,1); height:20px;"></div>
+
+    <div id="headerBox">
+
+        <span id="heading">
+            <img id="logoImg" src="./img/vzTM_logo.png">
+            <span id="headingTitle" class="label label-default">
+                Responsive List
+            </span>
+        </span>
+
+        <div id="searchTextGrp" class="input-group">
+            <span class="input-group-addon">
+                <i class="glyphicon glyphicon-search"></i>
+            </span>
+            <input id="searchText" type="text" data-ng-model="textSearch" class="form-control" >
+        </div>
+
+    </div>
+
+<table id="deviceTable" class="table table-striped table-curved" >
+    <thead>
+      <tr>
+        <th> Serial Number</th>
+        <th> Device Type </th>
+        <th> Model        </th>
+        <th> Confirmation Code</th>
+        <th> Status</th>
+        <th> Actions</th>
+      </tr>
+    </thead>
+
+    <tbody>
+        <tr ng-repeat="device in deviceList | filter:textSearch">
+            <td> {{ device.serialNumber }} </td>
+            <td> {{ device.deviceType }}    </td>
+            <td> {{ device.model }}     </td>
+            <td> {{ device.confirmationCode }}   </td>
+            <td> {{ device.status }} </td>
+            <td class="nwf-actions">
+                <span data-ng-include src="'./partials/actionItems.html'"></span>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+
+<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.8/angular.min.js"></script>
+<script src="js/responsiveList.js"></script>
+
+
+</body>
+</html>
+

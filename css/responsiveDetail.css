@@ -1,0 +1,74 @@
+#headerBox{
+    height:65px;
+    padding:5px 5px 5px 15px;
+    background-color: #F3F3F3;
+}
+
+#logoImg{
+    width:93px;
+    height:auto;
+}
+
+
+#heading{
+    float:left;
+    font-size:20px;
+    width:400px;
+}
+
+#headingTitle{
+    margin-left:20px;
+    margin-top:5px;
+}
+
+body{
+    background-color:#fafafa;
+}
+
+#mainDetailDiv{
+    padding-left:15px;
+    padding-top:20px;
+    background-color:#fafafa;
+}
+
+.spDetailCol{
+   // height:600px;
+}
+
+#spDetailCol1{
+
+}
+
+#spDetailCol2{
+
+}
+
+#spDetailCol3{
+
+}
+
+#buttonGroup{
+    float:right;
+    margin-right:60px;
+    margin-bottom:20px;
+}
+
+@media
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+
+    #buttonGroup{
+        float:none;
+        margin-right:60px;
+        margin-bottom:20px;
+    }
+
+    #buttonGroup button{
+       width:47%;
+    }
+
+    div[class|='col-xs']{
+        float:none;
+        width:100%;
+    }
+}
